@@ -17,7 +17,7 @@
   <email>jan@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2017-10-17</date>
+ <date>2017-10-27</date>
  <version>
   <release>2.2.2</release>
   <api>1.3.0</api>
@@ -31,6 +31,13 @@
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
+   <dir name="doc">
+    <dir name="Horde">
+     <dir name="Nls">
+      <file name="CHANGES" role="doc" />
+     </dir> <!-- /doc/Horde/Nls -->
+    </dir> <!-- /doc/Horde -->
+   </dir> <!-- /doc -->
    <dir name="lib">
     <dir name="Horde">
      <dir name="Nls">
@@ -345,6 +352,7 @@
  </dependencies>
  <phprelease>
   <filelist>
+   <install as="CHANGES" name="doc/Horde/Nls/CHANGES" />
    <install as="Horde/Nls.php" name="lib/Horde/Nls.php" />
    <install as="Horde/Nls/Alpha3.php" name="lib/Horde/Nls/Alpha3.php" />
    <install as="Horde/Nls/Carsigns.php" name="lib/Horde/Nls/Carsigns.php" />
@@ -875,7 +883,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2017-10-17</date>
+   <date>2017-10-27</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
    </notes>
