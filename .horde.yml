@@ -39,4 +39,6 @@ dependencies:
   optional:
     pear:
       pear.php.net/Net_DNS2: '*'
-      pecl.php.net/geoip: '*'
+      pecl.php.net/geoip:
+        version: '*'
+        providesextension: geoip
