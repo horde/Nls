@@ -3,7 +3,7 @@
  <name>Horde_Nls</name>
  <channel>pear.horde.org</channel>
  <extends>Horde_NLS</extends>
- <summary>Native Language Support (NLS)</summary>
+ <summary>Native language support library</summary>
  <description>Common methods for handling language data, timezones, and hostname-&gt;country lookups.</description>
  <lead>
   <name>Chuck Hagenbuch</name>
@@ -17,7 +17,7 @@
   <email>jan@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2017-10-27</date>
+ <date>2017-11-11</date>
  <version>
   <release>2.2.2</release>
   <api>1.3.0</api>
@@ -884,7 +884,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2017-10-27</date>
+   <date>2017-11-11</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
 * 
