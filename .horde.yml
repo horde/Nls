@@ -2,7 +2,7 @@
 id: Nls
 name: Nls
 full: Native language support library
-description: >
+description: >-
   Common methods for handling language data, timezones, and hostname->country
   lookups.
 list: dev
