@@ -22,20 +22,16 @@
         {
             "type": "composer",
             "url": "https://horde-satis.maintaina.com/"
-        },
-        {
-            "url": "https://pear.php.net",
-            "type": "pear"
         }
     ],
     "require": {
         "horde/horde-installer-plugin": "*",
-        "php": "^5.3 || ^7",
-        "horde/translation": "^2.2",
-        "horde/util": "^2"
+        "php": "^7",
+        "horde/translation": "^3",
+        "horde/util": "^3"
     },
     "suggest": {
-        "pear-pear.php.net/Net_DNS2": "*",
+        "pear/net_dns2": "*",
         "ext-geoip": "*"
     },
     "autoload": {
