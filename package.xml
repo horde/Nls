@@ -17,7 +17,7 @@
   <email>chuck@horde.org</email>
   <active>no</active>
  </lead>
- <date>2021-02-24</date>
+ <date>2021-03-13</date>
  <version>
   <release>3.0.0alpha3</release>
   <api>3.0.0alpha1</api>
@@ -28,7 +28,7 @@
  </stability>
  <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
  <notes>
-* 
+* |+
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -48,6 +48,7 @@
       <file name="Countries.php" role="php" />
       <file name="Geoip.php" role="php" />
       <file name="Languages.php" role="php" />
+      <file name="Loader.php" role="php" />
       <file name="Tld.php" role="php" />
       <file name="Translation.php" role="php">
        <tasks:replace from="@data_dir@" to="data_dir" type="pear-config" />
@@ -341,6 +342,7 @@
    <install as="Horde/Nls/Countries.php" name="lib/Horde/Nls/Countries.php" />
    <install as="Horde/Nls/Geoip.php" name="lib/Horde/Nls/Geoip.php" />
    <install as="Horde/Nls/Languages.php" name="lib/Horde/Nls/Languages.php" />
+   <install as="Horde/Nls/Loader.php" name="lib/Horde/Nls/Loader.php" />
    <install as="Horde/Nls/Tld.php" name="lib/Horde/Nls/Tld.php" />
    <install as="Horde/Nls/Translation.php" name="lib/Horde/Nls/Translation.php" />
    <install as="LICENSE" name="LICENSE" />
@@ -432,39 +434,6 @@
   </filelist>
  </phprelease>
  <changelog>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
   <release>
    <version>
     <release>0.0.1</release>
@@ -979,7 +948,7 @@
    <date>2021-02-24</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
-* 
+* |+
    </notes>
   </release>
  </changelog>
