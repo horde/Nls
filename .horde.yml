@@ -1,4 +1,4 @@
----
+B---
 id: Nls
 name: Nls
 full: Native language support library
@@ -36,8 +36,12 @@ dependencies:
     composer:
       horde/translation: ^3
       horde/util: ^3
+  dev:
+    php: ^7.4 || ^8
+    composer:
+      mikepultz/netdns2: ^2.0
   optional:
     composer:
-      pear/net_dns2: '*'
+      mikepultz/netdns2: ^2.0
     ext:
       geoip: '*'

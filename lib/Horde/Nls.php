@@ -33,7 +33,7 @@ class Horde_Nls
     /**
      * DNS resolver.
      *
-     * @var Net_DNS2_Resolver
+     * @var NetDNS2\Resolver
      */
     public static $dnsResolver;
 
@@ -176,7 +176,7 @@ class Horde_Nls
                             break;
                         }
                     }
-                } catch (Net_DNS2_Exception $e) {}
+                } catch (NetDNS2\Exception $e) {}
             }
             if (is_null($checkHost)) {
                 $checkHost = @gethostbyaddr($host);
