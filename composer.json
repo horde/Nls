@@ -31,7 +31,7 @@
     },
     "require-dev": {},
     "suggest": {
-        "pear/net_dns2": "*",
+        "mikepultz/netdns2": "^2.0",
         "ext-geoip": "*"
     },
     "autoload": {
