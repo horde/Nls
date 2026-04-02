@@ -51,6 +51,19 @@
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
   notes: ~
+3.0.0-beta1:
+  api: 3.0.0-beta1
+  state:
+    release: beta
+    api: beta
+  date: 2026-04-02
+  license:
+    identifier: LGPL-2.1-only
+    uri: https://spdx.org/licenses/LGPL-2.1-only.html
+  notes: |-
+    chore(metadata): Add keywords to .horde.yml
+    test: Create an initial test suite for NLS library
+    style: php-cs-fixer
 3.0.0-alpha6:
   api: 3.0.0-alpha6
   state:
