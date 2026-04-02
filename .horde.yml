@@ -46,3 +46,7 @@ dependencies:
     ext:
       geoip: '*'
 vendor: horde
+keywords:
+  - country
+  - language
+  - tld
