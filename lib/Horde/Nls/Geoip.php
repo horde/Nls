@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Horde optimized interface to the MaxMind IP Address->Country listing.
  *
@@ -8,8 +9,8 @@
  * Originally based on php version of the geoip library written in May
  * 2002 by jim winstead <jimw@apache.org>
  *
- * Copyright 2003 MaxMind LLC
- * Copyright 2003-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2003-2026 MaxMind LLC
+ * Copyright 2003-2026 Horde LLC (http://www.horde.org/)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -26,16 +27,16 @@
 class Horde_Nls_Geoip
 {
     /* TODO */
-    const GEOIP_COUNTRY_BEGIN = 16776960;
-    const STRUCTURE_INFO_MAX_SIZE = 20;
-    const STANDARD_RECORD_LENGTH = 3;
+    public const GEOIP_COUNTRY_BEGIN = 16776960;
+    public const STRUCTURE_INFO_MAX_SIZE = 20;
+    public const STANDARD_RECORD_LENGTH = 3;
 
     /**
      * Country list.
      *
      * @var array
      */
-    protected $_countryCodes = array(
+    protected $_countryCodes = [
         '', 'AP', 'EU', 'AD', 'AE', 'AF', 'AG', 'AI', 'AL', 'AM', 'AN', 'AO',
         'AQ', 'AR', 'AS', 'AT', 'AU', 'AW', 'AZ', 'BA', 'BB', 'BD', 'BE',
         'BF', 'BG', 'BH', 'BI', 'BJ', 'BM', 'BN', 'BO', 'BR', 'BS', 'BT',
@@ -58,8 +59,8 @@ class Horde_Nls_Geoip
         'TH', 'TJ', 'TK', 'TM', 'TN', 'TO', 'TP', 'TR', 'TT', 'TV', 'TW',
         'TZ', 'UA', 'UG', 'UM', 'US', 'UY', 'UZ', 'VA', 'VC', 'VE', 'VG',
         'VI', 'VN', 'VU', 'WF', 'WS', 'YE', 'YT', 'YU', 'ZA', 'ZM', 'ZR',
-        'ZW', 'A1', 'A2', 'O1'
-    );
+        'ZW', 'A1', 'A2', 'O1',
+    ];
 
     /**
      * The location of the GeoIP database.
@@ -135,18 +136,18 @@ class Horde_Nls_Geoip
         if (Horde_Util::extensionExists('geoip')) {
             $id = @geoip_country_code_by_name($name);
             $cname = @geoip_country_name_by_name($name);
-            return (!empty($id) && !empty($cname)) ?
-                array('code' => Horde_String::lower($id), 'name' => $cname):
-                false;
+            return (!empty($id) && !empty($cname))
+                ? ['code' => Horde_String::lower($id), 'name' => $cname]
+                : false;
         }
 
         $id = $this->countryIdByName($name);
         if (!empty($id)) {
             $code = $this->_countryCodes[$id];
-            return array(
+            return [
                 'code' => Horde_String::lower($code),
-                'name' => $this->_getName($code)
-            );
+                'name' => $this->_getName($code),
+            ];
         }
 
         return false;
@@ -286,7 +287,7 @@ class Horde_Nls_Geoip
                 return false;
             }
             $buf = fread($this->_fh, 2 * self::STANDARD_RECORD_LENGTH);
-            $x = array(0, 0);
+            $x = [0, 0];
 
             for ($i = 0; $i < 2; ++$i) {
                 for ($j = 0; $j < self::STANDARD_RECORD_LENGTH; ++$j) {
@@ -320,17 +321,16 @@ class Horde_Nls_Geoip
     {
         $code = Horde_String::upper($code);
 
-        $geoip_codes = array(
+        $geoip_codes = [
             'AP' => Horde_Nls_Translation::t("Asia/Pacific Region"),
             'EU' => Horde_Nls_Translation::t("Europe"),
             'A1' => Horde_Nls_Translation::t("Anonymous Proxy"),
             'A2' => Horde_Nls_Translation::t("Satellite Provider"),
-            'O1' => Horde_Nls_Translation::t("Other")
-        );
+            'O1' => Horde_Nls_Translation::t("Other"),
+        ];
 
-        return isset($geoip_codes[$code])
-            ? $geoip_codes[$code]
-            : strval(Horde_Nls::getCountryISO($code));
+        return $geoip_codes[$code]
+            ?? strval(Horde_Nls::getCountryISO($code));
     }
 
 }

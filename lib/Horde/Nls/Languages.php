@@ -1,11 +1,12 @@
 <?php
+
 /**
  * The ISO 639-1 language list.
  *
  * @category Horde
  * @package  Nls
  */
-$languages = array(
+$languages = [
     'aa' => Horde_Nls_Translation::t("Afar"),
     'ab' => Horde_Nls_Translation::t("Abkhaz"),
     'ae' => Horde_Nls_Translation::t("Avestan"),
@@ -189,5 +190,5 @@ $languages = array(
     'yo' => Horde_Nls_Translation::t("Yoruba"),
     'za' => Horde_Nls_Translation::t("Zhuang, Chuang"),
     'zh' => Horde_Nls_Translation::t("Chinese"),
-    'zu' => Horde_Nls_Translation::t("Zulu")
-);
+    'zu' => Horde_Nls_Translation::t("Zulu"),
+];

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Top level domain (TLD) list for country codes.
  * Generated from IANA (Internet Assigned Numbers Authority) data located
@@ -9,7 +10,7 @@
  *
  * @package Nls
  */
-$tld = array(
+$tld = [
     'ac' => Horde_Nls_Translation::t("Ascension Island"),
     'ad' => Horde_Nls_Translation::t("Andorra"),
     'ae' => Horde_Nls_Translation::t("United Arab Emirates"),
@@ -259,5 +260,5 @@ $tld = array(
     'yu' => Horde_Nls_Translation::t("Yugoslavia"),
     'za' => Horde_Nls_Translation::t("South Africa"),
     'zm' => Horde_Nls_Translation::t("Zambia"),
-    'zw' => Horde_Nls_Translation::t("Zimbabwe")
-);
+    'zw' => Horde_Nls_Translation::t("Zimbabwe"),
+];

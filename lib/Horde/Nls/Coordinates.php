@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file lists the locations of cities around the world. The
  * format is:

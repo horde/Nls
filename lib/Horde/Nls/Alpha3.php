@@ -1,10 +1,11 @@
 <?php
+
 /**
  * The ISO-3166 ALPHA-3 country list.
  *
  * @package Nls
  */
-$alpha3 = array(
+$alpha3 = [
     'AF' => 'AFG',
     'AX' => 'ALA',
     'AL' => 'ALB',
@@ -252,4 +253,4 @@ $alpha3 = array(
     'YE' => 'YEM',
     'ZM' => 'ZMB',
     'ZW' => 'ZWE',
-);
+];

@@ -1,10 +1,11 @@
 <?php
+
 /**
  * The list of international license plate codes.
  *
  * @package Nls
  */
-$carsigns = array(
+$carsigns = [
     'at' => 'A',
     'af' => 'AFG',
     'ag' => 'AG',
@@ -201,5 +202,5 @@ $carsigns = array(
     've' => 'YV',
     'zm' => 'Z',
     'za' => 'ZA',
-    'zw' => 'ZW'
-);
+    'zw' => 'ZW',
+];

@@ -1,10 +1,11 @@
 <?php
+
 /**
  * The ISO-3166 country list.
  *
  * @package Nls
  */
-$countries = array(
+$countries = [
     'AF' => Horde_Nls_Translation::t("Afghanistan"),
     'AX' => Horde_Nls_Translation::t("Åland Islands"),
     'AL' => Horde_Nls_Translation::t("Albania"),
@@ -253,7 +254,7 @@ $countries = array(
     'EH' => Horde_Nls_Translation::t("Western Sahara"),
     'YE' => Horde_Nls_Translation::t("Yemen"),
     'ZM' => Horde_Nls_Translation::t("Zambia"),
-    'ZW' => Horde_Nls_Translation::t("Zimbabwe")
-);
+    'ZW' => Horde_Nls_Translation::t("Zimbabwe"),
+];
 
 asort($countries, SORT_LOCALE_STRING);

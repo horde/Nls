@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 1999-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 1999-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -42,7 +43,7 @@ class Horde_Nls
      *
      * @var array
      */
-    protected static $_cache = array();
+    protected static $_cache = [];
 
     /**
      * Check to see if character set is valid for htmlspecialchars() calls.
@@ -134,7 +135,7 @@ class Horde_Nls
         }
 
         if (!isset(self::$_cache['nl_info'])) {
-            self::$_cache['nl_info'] = array();
+            self::$_cache['nl_info'] = [];
         }
 
         if (!isset(self::$_cache['nl_info'][$item])) {
@@ -160,10 +161,10 @@ class Horde_Nls
     {
         /* List of generic domains that we know is not in the country TLD
            list. See: http://www.iana.org/gtld/gtld.htm */
-        $generic = array(
+        $generic = [
             'aero', 'biz', 'com', 'coop', 'edu', 'gov', 'info', 'int', 'mil',
-            'museum', 'name', 'net', 'org', 'pro'
-        );
+            'museum', 'name', 'net', 'org', 'pro',
+        ];
 
         $checkHost = null;
         if (preg_match('/^\d+\.\d+\.\d+\.\d+$/', $host)) {
@@ -176,7 +177,8 @@ class Horde_Nls
                             break;
                         }
                     }
-                } catch (NetDNS2\Exception $e) {}
+                } catch (NetDNS2\Exception $e) {
+                }
             }
             if (is_null($checkHost)) {
                 $checkHost = @gethostbyaddr($host);
@@ -196,10 +198,10 @@ class Horde_Nls
         if (!in_array($domain, $generic)) {
             $name = self::tldLookup($domain);
             if ($name) {
-                return array(
+                return [
                     'code' => $domain,
-                    'name' => $name
-                );
+                    'name' => $name,
+                ];
             }
         }
 
@@ -224,9 +226,8 @@ class Horde_Nls
 
         $code = Horde_String::lower($code);
 
-        return isset(self::$_cache['tld'][$code])
-            ? self::$_cache['tld'][$code]
-            : null;
+        return self::$_cache['tld'][$code]
+            ?? null;
     }
 
     /**
@@ -251,9 +252,8 @@ class Horde_Nls
 
         $code = Horde_String::upper($code);
 
-        return isset(self::$_cache['iso3166'][$code])
-            ? self::$_cache['iso3166'][$code]
-            : null;
+        return self::$_cache['iso3166'][$code]
+            ?? null;
     }
 
     /**
@@ -279,9 +279,8 @@ class Horde_Nls
 
         $code = substr(Horde_String::lower(trim($code)), 0, 2);
 
-        return isset(self::$_cache['iso639'][$code])
-            ? self::$_cache['iso639'][$code]
-            : null;
+        return self::$_cache['iso639'][$code]
+            ?? null;
     }
 
 }
