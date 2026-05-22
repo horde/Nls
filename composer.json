@@ -21,10 +21,10 @@
         "language",
         "tld"
     ],
-    "time": "2026-04-02",
+    "time": "2026-05-22",
     "repositories": [],
     "require": {
-        "php": "^7.4 || ^8",
+        "php": "^8.1",
         "horde/translation": "^3 || dev-FRAMEWORK_6_0",
         "horde/util": "^3 || dev-FRAMEWORK_6_0"
     },
@@ -38,6 +38,9 @@
     "autoload": {
         "psr-0": {
             "Horde_Nls": "lib/"
+        },
+        "psr-4": {
+            "Horde\\Nls\\": "src/"
         }
     },
     "autoload-dev": {

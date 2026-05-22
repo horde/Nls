@@ -22,22 +22,21 @@ authors:
     active: false
     role: lead
 version:
-  release: 3.0.0-beta1
+  release: 3.0.0-RC1
   api: 3.0.0alpha1
 state:
-  release: beta
+  release: RC
   api: alpha
 license:
   identifier: LGPL-2.1-only
   uri: http://www.horde.org/licenses/lgpl21
 dependencies:
   required:
-    php: ^7.4 || ^8
+    php: ^8.1
     composer:
       horde/translation: ^3
       horde/util: ^3
   dev:
-    php: ^7.4 || ^8
     composer:
       mikepultz/netdns2: ^2.0
   optional:
