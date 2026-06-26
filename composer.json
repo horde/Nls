@@ -21,7 +21,7 @@
         "language",
         "tld"
     ],
-    "time": "2026-05-22",
+    "time": "2026-06-26",
     "repositories": [],
     "require": {
         "php": "^8.1",
